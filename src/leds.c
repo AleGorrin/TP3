@@ -1,8 +1,8 @@
 #include "leds.h"
 
-#define ALL_OFF 0
-#define BIT_ON 1
-#define LED_OFFSET 1
+#define ALL_OFF 0       //Constante para apagar todos los leds
+#define BIT_ON 1        //Constante para fijar el primer bit en uno
+#define LED_OFFSET 1    //Constante para convertir el numero de led en bit
 
 static uint16_t * leds;
 

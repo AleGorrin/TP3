@@ -38,7 +38,7 @@ void test_IndividualLedOn(void){
 
 //Se puede apagar un led individual
 void test_IndividualLedOff(void){
-    const uint8_t led = 3;
+    const uint16_t led = 3;
     leds_On(led);
     leds_Off(led);
     TEST_ASSERT_EQUAL_HEX16(0, ledsVirtuales);
@@ -54,11 +54,20 @@ void test_MultipleLedsOnAndOff(void){
 
 //Se pueden prender todos los leds de una vez
 void test_AllLedsOn(void){
-
+    uint16_t i;
+    for ( i = 0 ; i <= 16 ; ++i){
+        leds_On(i);
+    }
+    TEST_ASSERT_EQUAL(0xFF, ledsVirtuales);
 }
 //Se pueden apagar todos los leds de una vez
 void test_AllLedsOff(void){
-    
+    uint16_t i;
+    for ( i = 0 ; i <= 16 ; ++i){
+        leds_On(i);
+        leds_Off(i);
+    }
+    TEST_ASSERT_EQUAL(0, ledsVirtuales);
 }
 //Se puede consultar el estado de un led
 

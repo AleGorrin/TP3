@@ -61,7 +61,7 @@ void test_IndividualLedOn(void){
 
 void test_IndividualLedOff(void){
 
-    const uint8_t led = 3;
+    const uint16_t led = 3;
 
     leds_On(led);
 
@@ -101,7 +101,19 @@ void test_MultipleLedsOnAndOff(void){
 
 void test_AllLedsOn(void){
 
+    uint16_t i;
 
+    for ( i = 0 ; i <= 16 ; ++i){
+
+        leds_On(i);
+
+    }
+
+    UnityAssertEqualNumber((UNITY_INT)((0xFF)), (UNITY_INT)((ledsVirtuales)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(61), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -109,6 +121,20 @@ void test_AllLedsOn(void){
 
 void test_AllLedsOff(void){
 
+    uint16_t i;
 
+    for ( i = 0 ; i <= 16 ; ++i){
+
+        leds_On(i);
+
+        leds_Off(i);
+
+    }
+
+    UnityAssertEqualNumber((UNITY_INT)((0)), (UNITY_INT)((ledsVirtuales)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(70), UNITY_DISPLAY_STYLE_INT);
 
 }

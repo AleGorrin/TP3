@@ -87,7 +87,7 @@ int main(void)
   run_test(test_IndividualLedOff, "test_IndividualLedOff", 40);
   run_test(test_MultipleLedsOnAndOff, "test_MultipleLedsOnAndOff", 48);
   run_test(test_AllLedsOn, "test_AllLedsOn", 56);
-  run_test(test_AllLedsOff, "test_AllLedsOff", 60);
+  run_test(test_AllLedsOff, "test_AllLedsOff", 64);
 
   return UnityEnd();
 }
