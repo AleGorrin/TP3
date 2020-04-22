@@ -143,16 +143,20 @@ void test_AllLedsOff(void){
 
 void test_LedStatus(void){
 
+    uint16_t ledsVirtuales = 0xFFFF;
+
     uint8_t led = 3;
 
     leds_On(led);
 
     leds_status(led);
 
-    UnityAssertEqualNumber((UNITY_INT)((1)), (UNITY_INT)((ledsVirtuales)), (
+
+
+    UnityAssertEqualNumber((UNITY_INT)((1)), (UNITY_INT)((leds_status)), (
 
    ((void *)0)
 
-   ), (UNITY_UINT)(77), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(79), UNITY_DISPLAY_STYLE_INT);
 
 }

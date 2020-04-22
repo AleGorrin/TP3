@@ -71,10 +71,12 @@ void test_AllLedsOff(void){
 }
 //Se puede consultar el estado de un led
 void test_LedStatus(void){
+    uint16_t ledsVirtuales = 0xFFFF;
     uint8_t led = 3;
     leds_On(led);
     leds_status(led);
-    TEST_ASSERT_EQUAL(1, ledsVirtuales);
+    //TEST_ASSERT_EQUAL_HEX16(1 , ledsVirtuales);
+    TEST_ASSERT_EQUAL(1 , leds_status(led));         // queria probar la misma funcion luego de prender un led y esta deberia darme 1
 }
 //Revisar limites de los parametros
 
