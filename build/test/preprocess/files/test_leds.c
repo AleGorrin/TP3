@@ -33,7 +33,7 @@ void test_LedsOffAfterCreate(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(29), UNITY_DISPLAY_STYLE_HEX16);
+   ), (UNITY_UINT)(27), UNITY_DISPLAY_STYLE_HEX16);
 
 }
 
@@ -51,7 +51,7 @@ void test_IndividualLedOn(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(36), UNITY_DISPLAY_STYLE_HEX16);
+   ), (UNITY_UINT)(34), UNITY_DISPLAY_STYLE_HEX16);
 
 }
 
@@ -71,7 +71,7 @@ void test_IndividualLedOff(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(44), UNITY_DISPLAY_STYLE_HEX16);
+   ), (UNITY_UINT)(42), UNITY_DISPLAY_STYLE_HEX16);
 
 }
 
@@ -91,7 +91,7 @@ void test_MultipleLedsOnAndOff(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(52), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(50), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -103,7 +103,7 @@ void test_AllLedsOn(void){
 
     uint16_t i;
 
-    for ( i = 0 ; i <= 32 ; ++i){
+    for ( i = 0 ; i <= 16 ; ++i){
 
         leds_On(i);
 
@@ -113,7 +113,7 @@ void test_AllLedsOn(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(61), UNITY_DISPLAY_STYLE_HEX16);
+   ), (UNITY_UINT)(59), UNITY_DISPLAY_STYLE_HEX16);
 
 }
 
@@ -135,7 +135,7 @@ void test_AllLedsOff(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(70), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(68), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -143,20 +143,18 @@ void test_AllLedsOff(void){
 
 void test_LedStatus(void){
 
-    uint16_t ledsVirtuales = 0xFFFF;
-
     uint8_t led = 3;
 
     leds_On(led);
 
     leds_status(led);
 
-
-
-    UnityAssertEqualNumber((UNITY_INT)((1)), (UNITY_INT)((leds_status)), (
+    UnityAssertEqualNumber((UNITY_INT)(UNITY_INT16)((1)), (UNITY_INT)(UNITY_INT16)((ledsVirtuales)), (
 
    ((void *)0)
 
-   ), (UNITY_UINT)(79), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(75), UNITY_DISPLAY_STYLE_HEX16);
+
+
 
 }

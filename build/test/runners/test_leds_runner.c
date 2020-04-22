@@ -83,13 +83,13 @@ static void run_test(UnityTestFunction func, const char* name, int line_num)
 int main(void)
 {
   UnityBegin("test_leds.c");
-  run_test(test_LedsOffAfterCreate, "test_LedsOffAfterCreate", 26);
-  run_test(test_IndividualLedOn, "test_IndividualLedOn", 33);
-  run_test(test_IndividualLedOff, "test_IndividualLedOff", 40);
-  run_test(test_MultipleLedsOnAndOff, "test_MultipleLedsOnAndOff", 48);
-  run_test(test_AllLedsOn, "test_AllLedsOn", 56);
-  run_test(test_AllLedsOff, "test_AllLedsOff", 64);
-  run_test(test_LedStatus, "test_LedStatus", 73);
+  run_test(test_LedsOffAfterCreate, "test_LedsOffAfterCreate", 24);
+  run_test(test_IndividualLedOn, "test_IndividualLedOn", 31);
+  run_test(test_IndividualLedOff, "test_IndividualLedOff", 38);
+  run_test(test_MultipleLedsOnAndOff, "test_MultipleLedsOnAndOff", 46);
+  run_test(test_AllLedsOn, "test_AllLedsOn", 54);
+  run_test(test_AllLedsOff, "test_AllLedsOff", 62);
+  run_test(test_LedStatus, "test_LedStatus", 71);
 
   return UnityEnd();
 }
