@@ -22,4 +22,11 @@ void leds_On(uint8_t led){
 void leds_Off(uint8_t led){
     *leds &= ~leds_Bits(led);
 }
-
+void leds_status(uint8_t led){
+    if (*leds = 1){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}

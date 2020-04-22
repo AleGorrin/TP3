@@ -16,6 +16,7 @@ extern void test_IndividualLedOff(void);
 extern void test_MultipleLedsOnAndOff(void);
 extern void test_AllLedsOn(void);
 extern void test_AllLedsOff(void);
+extern void test_LedStatus(void);
 
 
 /*=======Mock Management=====*/
@@ -88,6 +89,7 @@ int main(void)
   run_test(test_MultipleLedsOnAndOff, "test_MultipleLedsOnAndOff", 48);
   run_test(test_AllLedsOn, "test_AllLedsOn", 56);
   run_test(test_AllLedsOff, "test_AllLedsOff", 64);
+  run_test(test_LedStatus, "test_LedStatus", 73);
 
   return UnityEnd();
 }

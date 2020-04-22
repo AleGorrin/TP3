@@ -3,8 +3,8 @@
 >Se puede prender un led individual
 >Se puede apagar un led individual
 >Se pueden prender y apagar multiples leds
-Se pueden prender todos los leds de una vez
-Se pueden apagar todos los leds de una vez
+>Se pueden prender todos los leds de una vez
+>Se pueden apagar todos los leds de una vez
 Se puede consultar el estado de un led
 Revisar limites de los parametros
 Revisar parametros fuera de los limites
@@ -55,10 +55,10 @@ void test_MultipleLedsOnAndOff(void){
 //Se pueden prender todos los leds de una vez
 void test_AllLedsOn(void){
     uint16_t i;
-    for ( i = 0 ; i <= 16 ; ++i){
+    for ( i = 0 ; i <= 32 ; ++i){
         leds_On(i);
     }
-    TEST_ASSERT_EQUAL(0xFF, ledsVirtuales);
+    TEST_ASSERT_EQUAL_HEX16(0xFF, ledsVirtuales);
 }
 //Se pueden apagar todos los leds de una vez
 void test_AllLedsOff(void){
@@ -70,7 +70,12 @@ void test_AllLedsOff(void){
     TEST_ASSERT_EQUAL(0, ledsVirtuales);
 }
 //Se puede consultar el estado de un led
-
+void test_LedStatus(void){
+    uint8_t led = 3;
+    leds_On(led);
+    leds_status(led);
+    TEST_ASSERT_EQUAL(1, ledsVirtuales);
+}
 //Revisar limites de los parametros
 
 //Revisar parametros fuera de los limites
