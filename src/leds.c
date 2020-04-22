@@ -23,7 +23,7 @@ void leds_Off(uint8_t led){
     *leds &= ~leds_Bits(led);
 }
 void leds_status(uint8_t led){
-    if (*leds |= leds_Bits(led)){
+    if (*leds =1) {
         return 1;
     }
     else{
