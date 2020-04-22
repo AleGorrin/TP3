@@ -1,0 +1,42 @@
+---
+:source:
+  :path: test
+  :file: test_leds.c
+:successes:
+- :test: test_LedsOffAfterCreate
+  :line: 24
+  :message: ''
+  :unity_test_time: 0
+- :test: test_IndividualLedOn
+  :line: 31
+  :message: ''
+  :unity_test_time: 0
+- :test: test_IndividualLedOff
+  :line: 38
+  :message: ''
+  :unity_test_time: 0
+- :test: test_MultipleLedsOnAndOff
+  :line: 46
+  :message: ''
+  :unity_test_time: 0
+- :test: test_AllLedsOn
+  :line: 54
+  :message: ''
+  :unity_test_time: 0
+- :test: test_AllLedsOff
+  :line: 62
+  :message: ''
+  :unity_test_time: 0
+:failures:
+- :test: test_LedStatus
+  :line: 75
+  :message: Expected 0x0001 Was 0x0004
+  :unity_test_time: 0
+:ignores: []
+:counts:
+  :total: 7
+  :passed: 6
+  :failed: 1
+  :ignored: 0
+:stdout: []
+:time: 0.0017934900024556555
